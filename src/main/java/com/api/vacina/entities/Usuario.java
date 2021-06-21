@@ -3,7 +3,6 @@ package com.api.vacina.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,10 +25,8 @@ public class Usuario implements Serializable{
 	
 	private String nome;
 	
-	@Column(unique = true)
 	private String email;
 	
-	@Column(unique = true)
 	private String cpf;
 	
 	private Date date;

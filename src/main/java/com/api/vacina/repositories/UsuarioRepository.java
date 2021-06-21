@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.api.vacina.entities.Usuario;
 
 @Repository
-public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
+public interface UsuarioRepository extends CrudRepository<Usuario, String> {
 
 }
