@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Vacinas</title>
-
-<head>
-      <!--Import Google Icon Font-->
+<html xmlms:th="http://thymeleaf.org"
+	  xmlms:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>  
+	  <title>Vacina</title>
+	  
+	        <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
 </head>
 <body>
 
-		<!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-
+	<h1>Lista de Eventos</h1>
+	<h3><a href="/cadastrar" class="waves-effect waves-light btn"><i class="material-icons left">add_box</i>Cadastrar Usuários</a></h3>
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>CPF</th>
+				<th>Data</th>
+			</tr>
+	</thead>
+		<tbody>
 		
+		</tbody>
+	</table>
+</div>
+	<!--text-->
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 
 </html>

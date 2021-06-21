@@ -10,28 +10,28 @@ import com.api.vacina.entities.Usuario;
 import com.api.vacina.repositories.UsuarioRepository;
 
 @Controller
-@RequestMapping("/usuarios")
 public class UsuarioController {
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
+	
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.GET)
 	public String form() {
-		return "usuario/formCadastro";
+		return "usuario/cadastro";
 	}
 	
 	
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.POST)
 	public String form(Usuario usuario) {
 		usuarioRepository.save(usuario);
-		return "redirect:usuario/formCadastro";
+		return "redirect:/cadastro";
 	}
 	
 	
 	@RequestMapping(value = "/lista", method = RequestMethod.GET)
 	public ModelAndView listar(){
-		ModelAndView mv = new ModelAndView("usuario/lista");
+		ModelAndView mv = new ModelAndView("/index");
 		Iterable<Usuario> usuarios = usuarioRepository.findAll();
 		mv.addObject("usuario", usuarios);
 		return mv;
