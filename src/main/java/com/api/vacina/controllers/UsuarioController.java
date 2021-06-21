@@ -18,9 +18,11 @@ public class UsuarioController {
 	
 	@RequestMapping(value = "/lista", method = RequestMethod.GET)
 	public ModelAndView listar(){
-		ModelAndView mv = new ModelAndView("/lista");
+		ModelAndView mv = new ModelAndView("usuario/lista");
 		Iterable<Usuario> usuarios = usuarioRepository.findAll();
 		mv.addObject("usuario", usuarios);
 		return mv;
 	}
+	
+	
 }
