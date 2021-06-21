@@ -16,6 +16,19 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
+	@RequestMapping(value = "/cadastrar", method = RequestMethod.GET)
+	public String form() {
+		return "usuario/formCadastro";
+	}
+	
+	
+	@RequestMapping(value = "/cadastrar", method = RequestMethod.POST)
+	public String form(Usuario usuario) {
+		usuarioRepository.save(usuario);
+		return "redirect:usuario/formCadastro";
+	}
+	
+	
 	@RequestMapping(value = "/lista", method = RequestMethod.GET)
 	public ModelAndView listar(){
 		ModelAndView mv = new ModelAndView("usuario/lista");
