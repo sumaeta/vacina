@@ -15,12 +15,13 @@ public class DataConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource data = new DriverManagerDataSource();
-		data.setUrl("jdbc:mysql://localhost:3306/vacina");
+		data.setUrl("jdbc:mysql://127.0.0.1:3306/vacina");
 		data.setUsername("root");
 		data.setPassword("1234");
 		return data;
 	}
 	
+	@Bean
 	public JpaVendorAdapter jpa() {
 		HibernateJpaVendorAdapter hibernate = new HibernateJpaVendorAdapter();
 		hibernate.setDatabase(Database.MYSQL);

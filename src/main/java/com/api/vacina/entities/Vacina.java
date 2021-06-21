@@ -1,39 +1,32 @@
 package com.api.vacina.entities;
 
+import java.io.Serializable;
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Vacina {
+public class Vacina implements Serializable{
+
+	
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	@EqualsAndHashCode.Include
+	private Long id;
+	
 	private String nome;
 	
-	public Vacina(String id, String nome) {
-		super();
-		this.id = id;
-		this.nome = nome;
-	}
+	private String email;
 	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public String getNome() {
-		return nome;
-	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	
+	private Instant data;
 }
